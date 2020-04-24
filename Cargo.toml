@@ -1,0 +1,13 @@
+[package]
+name = "short-text"
+version = "0.1.0"
+authors = ["Lucas Palomo <devlpalomo@gmail.com>"]
+edition = "2018"
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/Lucas-Palomo/short-text"
+keywords = ["text"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
