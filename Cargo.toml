@@ -14,3 +14,4 @@ keywords = ["text"]
 
 [dependencies]
 webpage = "1.1.0"
+soup = "0.5.0"
