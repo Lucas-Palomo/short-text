@@ -10,18 +10,18 @@ pub struct Paragraph {
     list: Vec<ListElement>,
 }
 
-trait ParagraphOOPFunctions {
+pub trait ParagraphOOPFunctions {
     fn set_paragraph(&mut self, paragraph: &str);
     fn set_citation(&mut self, citation: &str);
     fn set_images(&mut self, images: Vec<Image>);
     fn set_links(&mut self, links: Vec<Link>);
     fn set_lists(&mut self, list: Vec<ListElement>);
 
-    fn get_paragraph(self) -> String;
-    fn get_citation(self) -> String;
-    fn get_images(self) -> Vec<Image>;
-    fn get_links(self) -> Vec<Link>;
-    fn get_list(self) -> Vec<ListElement>;
+    fn get_paragraph(&self) -> &String;
+    fn get_citation(&self) -> &String;
+    fn get_images(&self) -> &Vec<Image>;
+    fn get_links(&self) -> &Vec<Link>;
+    fn get_list(&self) -> &Vec<ListElement>;
 }
 
 impl ParagraphOOPFunctions for Paragraph {
@@ -45,24 +45,24 @@ impl ParagraphOOPFunctions for Paragraph {
         self.list = list;
     }
 
-    fn get_paragraph(self) -> String {
-        return self.paragraph;
+    fn get_paragraph(&self) -> &String {
+        return &self.paragraph;
     }
 
-    fn get_citation(self) -> String {
-        return self.citation;
+    fn get_citation(&self) -> &String {
+        return &self.citation;
     }
 
-    fn get_images(self) -> Vec<Image> {
-        return self.images;
+    fn get_images(&self) -> &Vec<Image> {
+        return &self.images;
     }
 
-    fn get_links(self) -> Vec<Link> {
-        return self.links;
+    fn get_links(&self) -> &Vec<Link> {
+        return &self.links;
     }
 
-    fn get_list(self) -> Vec<ListElement> {
-        return self.list;
+    fn get_list(&self) -> &Vec<ListElement> {
+        return &self.list;
     }
 }
 

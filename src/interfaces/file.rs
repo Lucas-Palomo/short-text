@@ -1,4 +1,3 @@
-use std::fs::File;
 use std::io::Error;
 
 pub trait FileInterface {

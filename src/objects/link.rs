@@ -5,16 +5,16 @@ pub struct Link {
     text: String,
 }
 
-trait LinkOOPFunctions {
+pub trait LinkOOPFunctions {
     fn set_from(&mut self, from: &str);
     fn set_to(&mut self, to: &str);
     fn set_anchor(&mut self, anchor: bool);
     fn set_text(&mut self, text: &str);
 
-    fn get_from(self) -> String;
-    fn get_to(self) -> String;
-    fn is_anchor(self) -> bool;
-    fn get_text(self) -> String;
+    fn get_from(&self) -> &String;
+    fn get_to(&self) -> &String;
+    fn is_anchor(&self) -> &bool;
+    fn get_text(&self) -> &String;
 }
 
 impl LinkOOPFunctions for Link {
@@ -34,19 +34,19 @@ impl LinkOOPFunctions for Link {
         self.text = text.to_string();
     }
 
-    fn get_from(self) -> String {
-        return self.from;
+    fn get_from(&self) -> &String {
+        return &self.from;
     }
 
-    fn get_to(self) -> String {
-        return self.to;
+    fn get_to(&self) -> &String {
+        return &self.to;
     }
 
-    fn is_anchor(self) -> bool {
-        return self.anchor;
+    fn is_anchor(&self) -> &bool {
+        return &self.anchor;
     }
 
-    fn get_text(self) -> String {
-        return self.text;
+    fn get_text(&self) -> &String {
+        return &self.text;
     }
 }

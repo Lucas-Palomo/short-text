@@ -1,4 +1,4 @@
-use short_text::{ShortText, WebPageInterface, FileInterface, ReadType};
+use short_text::{ShortText, WebPageInterface};
 
 fn main() {
 
@@ -10,7 +10,6 @@ fn main() {
 
     // short.read_file(file.unwrap());
 
-    short.analyze(ReadType::Test)
-
+    // short.analyze(ReadType::Test);
 }
 

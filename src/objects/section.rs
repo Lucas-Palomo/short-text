@@ -5,13 +5,13 @@ pub struct Section {
     paragraphs: Vec<Paragraph>,
 }
 
-trait SectionOOPFunctions {
+pub trait SectionOOPFunctions {
 
     fn set_title(&mut self, title: &str);
     fn set_paragraphs(&mut self, paragraphs: Vec<Paragraph>);
 
-    fn get_title(self) -> String;
-    fn get_paragraphs(self) -> Vec<Paragraph>;
+    fn get_title(&self) -> &String;
+    fn get_paragraphs(&self) -> &Vec<Paragraph>;
 
 }
 
@@ -24,12 +24,12 @@ impl SectionOOPFunctions for Section {
         self.paragraphs = paragraphs;
     }
 
-    fn get_title(self) -> String {
-        return self.title;
+    fn get_title(&self) -> &String {
+        return &self.title;
     }
 
-    fn get_paragraphs(self) -> Vec<Paragraph> {
-        return self.paragraphs;
+    fn get_paragraphs(&self) -> &Vec<Paragraph> {
+        return &self.paragraphs;
     }
 }
 
