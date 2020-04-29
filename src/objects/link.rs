@@ -5,7 +5,7 @@ pub struct Link {
     text: String,
 }
 
-pub trait LinkOOPFunctions {
+pub trait LinkFunctions {
     fn set_from(&mut self, from: &str);
     fn set_to(&mut self, to: &str);
     fn set_anchor(&mut self, anchor: bool);
@@ -17,7 +17,7 @@ pub trait LinkOOPFunctions {
     fn get_text(&self) -> &String;
 }
 
-impl LinkOOPFunctions for Link {
+impl LinkFunctions for Link {
     fn set_from(&mut self, from: &str) {
         self.from = from.to_string();
     }

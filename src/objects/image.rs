@@ -4,7 +4,7 @@ pub struct Image {
     title: String,
 }
 
-pub trait ImageOOPFunctions {
+pub trait ImageFunctions {
     fn set_url(&mut self, url: &str);
     fn set_description(&mut self, description: &str);
     fn set_title(&mut self, title: &str);
@@ -14,7 +14,7 @@ pub trait ImageOOPFunctions {
     fn get_title(&self) -> &String;
 }
 
-impl ImageOOPFunctions for Image {
+impl ImageFunctions for Image {
     fn set_url(&mut self, url: &str) {
         self.url = url.to_string();
     }

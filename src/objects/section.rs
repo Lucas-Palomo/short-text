@@ -5,7 +5,7 @@ pub struct Section {
     paragraphs: Vec<Paragraph>,
 }
 
-pub trait SectionOOPFunctions {
+pub trait SectionFunctions {
 
     fn set_title(&mut self, title: &str);
     fn set_paragraphs(&mut self, paragraphs: Vec<Paragraph>);
@@ -15,7 +15,7 @@ pub trait SectionOOPFunctions {
 
 }
 
-impl SectionOOPFunctions for Section {
+impl SectionFunctions for Section {
     fn set_title(&mut self, title: &str) {
         self.title = title.to_string();
     }

@@ -1,15 +1,18 @@
-use short_text::{ShortText, WebPageInterface};
+use short_text::{ShortText, WebPageInterface, ShortTextFunctions, MetaExtractionStrategy};
+use short_text::objects::content::ContentFunctions;
 
 fn main() {
-
     let short = ShortText::new();
-    let web = short.open_webpage("https://g1.globo.com/bemestar/coronavirus/noticia/2020/04/27/brasil-tem-4543-mortes-e-66501-casos-de-coronavirus-diz-ministerio.ghtml", None);
-    short.map_webpage(web.unwrap());
+    // short.set_meta_extraction_strategy(MetaExtractionStrategy::Twitter);
+    let web = short.open_webpage("https://ensinarhistoriajoelza.com.br/iluminismo-do-antigo-regime-aos-nossos-dias/", None);
+    let content = short.map_webpage(web.unwrap());
 
-    // let file = short.open_file("/home/darksrc/xbox.sh");
-
-    // short.read_file(file.unwrap());
-
-    // short.analyze(ReadType::Test);
+    println!("title: {}\n\
+              description: {}\n\
+              image: {}",
+             content.get_title(),
+             content.get_description(),
+             content.get_thumbnail()
+    )
 }
 

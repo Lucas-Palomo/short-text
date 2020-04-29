@@ -10,7 +10,7 @@ pub struct Paragraph {
     list: Vec<ListElement>,
 }
 
-pub trait ParagraphOOPFunctions {
+pub trait ParagraphFunctions {
     fn set_paragraph(&mut self, paragraph: &str);
     fn set_citation(&mut self, citation: &str);
     fn set_images(&mut self, images: Vec<Image>);
@@ -24,7 +24,7 @@ pub trait ParagraphOOPFunctions {
     fn get_list(&self) -> &Vec<ListElement>;
 }
 
-impl ParagraphOOPFunctions for Paragraph {
+impl ParagraphFunctions for Paragraph {
     fn set_paragraph(&mut self, paragraph: &str) {
         self.paragraph = paragraph.to_string();
     }

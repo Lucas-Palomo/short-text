@@ -7,7 +7,7 @@ pub struct Content {
     sections: Vec<Section>,
 }
 
-pub trait ContentOOPFunctions {
+pub trait ContentFunctions {
     fn set_title(&mut self, title: &str);
     fn set_description(&mut self, description: &str);
     fn set_thumbnail(&mut self, thumbnail: &str);
@@ -19,7 +19,7 @@ pub trait ContentOOPFunctions {
     fn get_sections(&self) -> &Vec<Section>;
 }
 
-impl ContentOOPFunctions for Content {
+impl ContentFunctions for Content {
     fn set_title(&mut self, title: &str) {
         self.title = title.to_string();
     }

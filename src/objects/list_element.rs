@@ -5,7 +5,7 @@ pub struct ListElement {
     text: String,
 }
 
-pub trait ListElementOOPFunctions {
+pub trait ListElementFunctions {
     fn set_link(&mut self, link: Link);
     fn set_text(&mut self, text: &str);
 
@@ -13,7 +13,7 @@ pub trait ListElementOOPFunctions {
     fn get_text(&self) -> &String;
 }
 
-impl ListElementOOPFunctions for ListElement {
+impl ListElementFunctions for ListElement {
     fn set_link(&mut self, link: Link) {
         self.link = link;
     }
